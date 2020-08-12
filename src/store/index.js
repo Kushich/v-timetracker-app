@@ -12,7 +12,7 @@ const store = new Vuex.Store({
   },
   actions: {
     async  LOGIN({ commit }) {
-      const provider = new firebase.auth.TwitterAuthProvider();
+      const provider = new firebase.auth.GoogleAuthProvider();
       await firebase
         .auth()
         .signInWithPopup(provider)

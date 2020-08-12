@@ -58,8 +58,8 @@
     <modal name="select-tasks" height="auto" :scrollable="true" @closed="onModalClosed">
       <div class="container modal-margin">
         <div class="card">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item" v-bind:key="task.key" v-for="task in userTasks" v-if="renderTaskList">
+          <ul class="list-group list-group-flush" v-if="renderTaskList">
+            <li class="list-group-item" v-bind:key="task.key" v-for="task in userTasks">
               <div class="row">
                 <div class="col-xs-4 col-sm-6">
                   <label>{{task.name}}</label>
@@ -280,7 +280,7 @@ export default {
 
 <style scoped>
 h1 {
-  color: #13117f;
+  color: #333;
   font-weight: normal;
 }
 
@@ -297,7 +297,12 @@ li {
 }
 
 .control-top {
-  padding: 10px 0px 0px 10px;
+  padding: 5px;
+  background-color: transparent;
+  color: #333;
+}
+::placeholder {
+  color: #333;
 }
 
 .control-right {
@@ -326,9 +331,34 @@ li {
 }
 
 .input-border {
-  border: 1px solid #0374d8;
+  border: 1px solid #333;
   margin-top: 2px;
   border-radius: 5px;
+}
+
+.btn-outline-primary {
+  color: #333;
+  border-color: #333;
+}
+
+.card {
+  background: #ff9d0054;
+}
+.list-group {
+  background-color: transparent;
+}
+
+.list-group-item {
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+.btn-outline-primary:disabled {
+  color: #333;
 }
 
 .project-control {

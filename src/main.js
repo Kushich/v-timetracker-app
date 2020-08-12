@@ -2,7 +2,6 @@ import Vue from 'vue';
 import firebase from 'firebase';
 import Vuefire from 'vuefire';
 import VModal from 'vue-js-modal';
-
 import App from './App';
 import router from './router';
 import store from './store';

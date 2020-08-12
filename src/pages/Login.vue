@@ -1,19 +1,19 @@
 <template>
 	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-form validate-form">
-					<span class="login100-form-logo">
+		<div class="container-login">
+			<div class="wrap-login">
+				<div class="login-form validate-form">
+					<span class="login-form-logo">
 						<i class="fa fa-hourglass-half"></i>
 					</span>
 
-					<span class="login100-form-title p-b-34 p-t-27">
+					<span class="login-form-title p-b-34 p-t-27">
 						Time Tracking
 					</span>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" v-on:click="login()">
-              <i class="fa fa-twitter login-icon" aria-hidden="true"></i>
+					<div class="container-login-form-btn">
+						<button class="login-form-btn" v-on:click="login()">
+              <i class="fa fa-google login-icon" aria-hidden="true"></i>
 							Login
 						</button>
 					</div>
@@ -77,7 +77,7 @@ export default {
   margin: 0 auto;
 }
 
-.container-login100 {
+.container-login {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -95,7 +95,7 @@ export default {
   z-index: 1;
 }
 
-.container-login100::before {
+.container-login::before {
   content: '';
   display: block;
   position: absolute;
@@ -104,26 +104,25 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.wrap-login100 {
+.wrap-login {
   width: 500px;
   border-radius: 10px;
   overflow: hidden;
   padding: 55px;
 
-  background: #0275d8;
+  background: #ff9d0054;
 }
 
 /* form */
-.login100-form {
+.login-form {
   width: 100%;
 }
 
-.login100-form-logo {
+.login-form-logo {
   font-size: 60px;
-  color: #333333;
+  color: #333;
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -139,7 +138,7 @@ export default {
   margin: 0 auto;
 }
 
-.login100-form-title {
+.login-form-title {
   font-family: Poppins-Medium;
   font-size: 30px;
   color: #fff;
@@ -262,7 +261,7 @@ input:-ms-input-placeholder {
 }
 
 /* button */
-.container-login100-form-btn {
+.container-login-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -273,10 +272,10 @@ input:-ms-input-placeholder {
   justify-content: center;
 }
 
-.login100-form-btn {
+.login-form-btn {
   font-family: Poppins-Medium;
   font-size: 16px;
-  color: #555555;
+  color: #333;
   line-height: 1.2;
 
   display: -webkit-box;
@@ -291,7 +290,7 @@ input:-ms-input-placeholder {
   height: 50px;
   border-radius: 25px;
 
-  background: #0374d8;
+  background: #333;
   position: relative;
   z-index: 1;
 
@@ -301,7 +300,7 @@ input:-ms-input-placeholder {
   transition: all 0.4s;
 }
 
-.login100-form-btn::before {
+.login-form-btn::before {
   content: '';
   display: block;
   position: absolute;
@@ -320,17 +319,17 @@ input:-ms-input-placeholder {
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover {
+.login-form-btn:hover {
   color: #fff;
 }
 
-.login100-form-btn:hover:before {
+.login-form-btn:hover:before {
   opacity: 0;
 }
 
 /* responsive */
 @media (max-width: 576px) {
-  .wrap-login100 {
+  .wrap-login {
     padding: 55px 15px;
   }
 }

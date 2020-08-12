@@ -55,12 +55,23 @@ export default {
 
 <style scoped>
 h1 {
-  color: #15116a;
+  color: #333;
+}
+
+.btn-outline-primary {
+  color: #333;
+  border-color: #333;
+}
+
+.btn-outline-primary:hover {
+  background-color: #333;
+  border-color: #333;
 }
 
 .time-container {
   padding-top: 25px;
 }
+
 
 @media (min-width: 768px) {
   .row-container {

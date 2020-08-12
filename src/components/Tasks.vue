@@ -41,7 +41,7 @@
             <div class="col-xs-12 col-sm-6" v-if="startedFromZero">
               <div class="row">
                 <div class="col-xs-12 col-sm-12">
-                  <input type="text" class="control-top input-border input-100" v-model="newTaskName"
+                  <input type="text" class="control-top input-border input" v-model="newTaskName"
                     placeholder="Task Name">
                   <button type="button" class="btn btn-outline-primary control-float-right"
                     v-on:click="saveTask()" :disabled="intervalId">
@@ -72,7 +72,7 @@
             <div class="col-xs-12 col-sm-6" v-if="addingTask">
               <div class="row">
                 <div class="col-xs-12 col-sm-12">
-                  <input type="text" class="control-top input-border input-100" v-model="newTaskName"
+                  <input type="text" class="control-top input-border input" v-model="newTaskName"
                     placeholder="Task Name">
                   <button type="button" class="btn btn-outline-primary control-float-right"
                     v-on:click="saveNewTask()" :disabled="disableSaveNewTask">
@@ -100,7 +100,7 @@
             <div class="col-xs-12 col-sm-6" v-if="continueTaskTime">
               <div class="row">
                 <div class="col-xs-12 col-sm-12">
-                  <input type="text" class="control-top input-border input-100" v-model="newTaskName"
+                  <input type="text" class="control-top input-border input" v-model="newTaskName"
                     placeholder="Task Name" disabled>
                   <button type="button" class="btn btn-outline-primary control-float-right"
                     v-on:click="saveTask()" :disabled="intervalId">
@@ -328,7 +328,7 @@ export default {
 
 <style scoped>
 h1 {
-  color: #13117f;
+  color: #333;
   font-weight: normal;
 }
 
@@ -345,7 +345,23 @@ li {
 }
 
 .control-top {
-  padding: 10px 0px 0px 10px;
+  padding: 5px;
+  background-color: transparent;
+  color: #333;
+}
+::placeholder {
+  color: #333;
+}
+
+.card {
+  background: #ff9d0054;
+}
+.list-group {
+  background-color: transparent;
+}
+
+.list-group-item {
+  background-color: transparent;
 }
 
 .control-right {
@@ -385,12 +401,12 @@ li {
 }
 
 .input-border {
-  border: 1px solid #0374d8;
+  border: 1px solid #333;
   margin-top: 2px;
   border-radius: 5px;
 }
 
-.input-100 {
+.input {
   width: 100%;
 }
 
@@ -407,5 +423,18 @@ li {
   padding-top: 5px;
   float: left;
   margin: 0px;
+}
+
+.btn-outline-primary {
+  color: #333;
+  border-color: #333;
+}
+
+.btn-outline-primary:hover {
+  background-color: #333;
+  border-color: #333;
+}
+.btn-outline-primary:disabled {
+  color: #333;
 }
 </style>
